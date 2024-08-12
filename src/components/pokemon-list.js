@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import RenderMoreButton from './render-more-button';
+import { Section, List, ListItem, PokemonImg, PokemonName } from '../styles/pokemon-list';
 
-async function fetchPokemon() {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
+async function fetchPokemon(offset) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`);
     return await response.json();
 }
 
@@ -15,13 +17,19 @@ class PokemonList extends Component {
     constructor() {
         super();
         this.state = {
-            list: []
+            list: [],
+            offset: 0
         };
     }
 
     async componentDidMount() {
+        await this.loadPokemon();
+    }
+
+    loadPokemon = async () => {
         try {
-            const data = await fetchPokemon();
+            const { offset, list } = this.state;
+            const data = await fetchPokemon(offset);
             const detailedList = await Promise.all(
                 data.results.map(async (pokemon) => {
                     const details = await fetchPokemonDetails(pokemon.url);
@@ -31,8 +39,10 @@ class PokemonList extends Component {
                     };
                 })
             );
-            console.log("Detailed list:", detailedList); // Log para verificar os detalhes
-            this.setState({ list: detailedList });
+            this.setState({
+                list: [...list, ...detailedList],
+                offset: offset + 10
+            });
         } catch (error) {
             console.error("Error fetching Pokémon data:", error);
         }
@@ -40,18 +50,19 @@ class PokemonList extends Component {
 
     render() {
         return (
-            <section>
-                <ul>
+            <Section>
+                <List>
                     {this.state.list.map((pokemon, index) => (
-                        <li key={index}>
+                        <ListItem key={index}>
                             <Link to={`/pokemon/${pokemon.name}`}>
-                                <img src={pokemon.imageUrl} alt={pokemon.name} />
-                                <h1>{pokemon.name}</h1>
+                                <PokemonImg src={pokemon.imageUrl} alt={pokemon.name} />
+                                <PokemonName>{pokemon.name}</PokemonName>
                             </Link>
-                        </li>
+                        </ListItem>
                     ))}
-                </ul>
-            </section>
+                </List>
+                <RenderMoreButton onClick={this.loadPokemon}/>
+            </Section>
         );
     }
 }
