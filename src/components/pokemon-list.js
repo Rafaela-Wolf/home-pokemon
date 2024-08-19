@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import RenderMoreButton from './render-more-button';
 import { Section, List, ListItem, PokemonImg, PokemonName } from '../styles/pokemon-list';
+import { StyleRenderMoreBtn } from '../styles/render-more-button';
 
 async function fetchPokemon(offset) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`);
@@ -56,12 +56,12 @@ class PokemonList extends Component {
                         <ListItem key={index}>
                             <Link to={`/pokemon/${pokemon.name}`}>
                                 <PokemonImg src={pokemon.imageUrl} alt={pokemon.name} />
-                                <PokemonName>{pokemon.name}</PokemonName>
                             </Link>
+                                <PokemonName>{pokemon.name}</PokemonName>
                         </ListItem>
                     ))}
                 </List>
-                <RenderMoreButton onClick={this.loadPokemon}/>
+                <StyleRenderMoreBtn onClick={this.loadPokemon}/>
             </Section>
         );
     }

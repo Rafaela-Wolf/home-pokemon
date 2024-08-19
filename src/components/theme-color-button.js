@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ThemeColorButton = ({ onClick }) => {
+const ThemeColorButton = ({ onClick, className }) => {
     return (
-        <button onClick={onClick}>Dark mode</button>
+        <button onClick={onClick} className={className}>Dark mode</button>
     );
 }
 

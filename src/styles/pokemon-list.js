@@ -5,31 +5,33 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 `
 
 export const List = styled.ul`
     list-style-type: none;
-    width: 70%;
-    height: 70%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    background-color: #FFFF00;
+    margin: 15px;
 `
 export const ListItem = styled.li`
     padding: 10px;
-    margin: 20px;
-    background-color: red;
-    width: 100px;
+    margin: 25px;
+    width: 120px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #3D7DCA;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-&:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-  }
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        background-color: #1F6F9F;
+    }
 `
 
 export const PokemonImg = styled.img`
@@ -38,9 +40,9 @@ export const PokemonImg = styled.img`
 `
 
 export const PokemonName = styled.h1`
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
     text-align: center;
 
     &:first-letter {
