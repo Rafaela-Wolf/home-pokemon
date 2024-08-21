@@ -95,16 +95,16 @@ export const TypesList = styled.ul`
     padding: 0;
 `
 
-export const AbilitiesList = styled.ul`
+export const AbilitiesList = styled.div`
     list-style-type: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);;
-    width: 20%;
+    background-color: #3D7DCA;
+    width: 30%;
     border-radius: 5px;
-    box-shadow: 0px 10px 20px #3D7DCA,
-                0px 4px 10px #3D7DCA;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4), 
+                0px 5px 15px rgba(0, 0, 0, 0.2);
 `
 
 export const AbilitiesTitle = styled.h3`
@@ -112,18 +112,30 @@ export const AbilitiesTitle = styled.h3`
     font-size: 22px;
     font-weight: 500;
     text-align: center;
-    margin: 0;
+    margin: 8px 5px;
     padding: 10px;
 `
 
-export const AbilitiesDescription = styled.li`
+export const AbilitiesName = styled.h5`
     &:first-letter {
         text-transform: uppercase;
     }
 
-    color: #ffffff;
-    padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    margin: 0px 15px;
+    margin: 0px 25px;
+    padding: 5px;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+`
+
+export const AbilitiesDescription = styled.p`
+    font-size: 16px;
+    margin: 10px 0px;
+    text-align: center;
+    color: #ffffff;
+
+    &:last-child {
+        margin-bottom: 25px;
+    }
 `

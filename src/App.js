@@ -1,16 +1,8 @@
-import './App.css';
 import AppRoutes from './pages/routes';
 import { DarkTheme, LightTheme } from './styles/themes';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import  { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { StyleThemeColorBtn } from './styles/theme-color-button';
-
-const Container = styled.body`
-    background-color: ${(props) => props.theme.body};
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-`;
 
 function App() {
   const [theme, setTheme] = useState(LightTheme);
@@ -19,13 +11,13 @@ function App() {
     setTheme(theme === LightTheme ? DarkTheme : LightTheme);
   };
 
+  const isDarkMode = theme === DarkTheme;
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Container>
-        <StyleThemeColorBtn onClick={toggleTheme} />
+        <StyleThemeColorBtn isDarkMode={isDarkMode} onClick={toggleTheme} />
         <AppRoutes />
-      </Container>
     </ThemeProvider>
   );
 }

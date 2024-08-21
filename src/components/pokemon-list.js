@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Section, List, ListItem, PokemonImg, PokemonName } from '../styles/pokemon-list';
+import { Section, List, ListItem, PokemonImg, PokemonName, HomeTitle } from '../styles/pokemon-list';
 import { StyleRenderMoreBtn } from '../styles/render-more-button';
 
 async function fetchPokemon(offset) {
@@ -35,7 +35,8 @@ class PokemonList extends Component {
                     const details = await fetchPokemonDetails(pokemon.url);
                     return {
                         name: pokemon.name,
-                        imageUrl: details.sprites.front_default
+                        imageUrl: details.sprites.front_default,
+                        type: details.types.map(typeInfo => typeInfo.type.name).join(', ')
                     };
                 })
             );
@@ -51,6 +52,7 @@ class PokemonList extends Component {
     render() {
         return (
             <Section>
+                <HomeTitle>Pokémon World: Your Guide to Every Pokémon</HomeTitle>
                 <List>
                     {this.state.list.map((pokemon, index) => (
                         <ListItem key={index}>

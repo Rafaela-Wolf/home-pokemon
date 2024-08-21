@@ -13,13 +13,13 @@ export const StyleRenderMoreBtn = styled(RenderMoreButton)`
     border-radius: 5px;
     border: 2px solid transparent;
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0px 20px 0px;
     background-color: #FF5733;
     color: #FFFFFF;
 
     &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    font-weight: 700;
-    background-color: #FF6F40;
+      transform: scale(1.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      font-weight: 700;
+    }
 `

@@ -5,8 +5,25 @@ export const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 `
+
+export const HomeTitle = styled.h1`
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #FF5733;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0px 5px 0px;
+    border: 2px solid transparent;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+`;
 
 export const List = styled.ul`
     list-style-type: none;

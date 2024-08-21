@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { AbilitiesList, AbilitiesDescription, AbilitiesTitle, Details, Main, MovesList, PokemonImgDet, PokemonNameDet, PokemonProfile, StyledLink, TitleAndDescription, TypesList } from '../styles/pokemon';
+import { AbilitiesDescription, AbilitiesList, AbilitiesName, AbilitiesTitle, Details, Main, MovesList, PokemonImgDet, PokemonNameDet, PokemonProfile, StyledLink, TitleAndDescription, TypesList } from '../styles/pokemon';
 
 async function fetchPokemonDetails(name) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
@@ -90,10 +90,11 @@ const PokemonDetails = () => {
                     const flavorText = englishEntries.length > 0 ? englishEntries[0].flavor_text : 'No description available';
 
                     return (
-                        <AbilitiesDescription key={index}>
-                          <strong>{ability.ability.name}: </strong>{flavorText}
-                        </AbilitiesDescription>
-                    );
+                        <>
+                            <AbilitiesName key={index}>{ability.ability.name}: </AbilitiesName>
+                            <AbilitiesDescription>{flavorText}</AbilitiesDescription>
+                        </>
+                    )
                 })}
             </AbilitiesList>
 
