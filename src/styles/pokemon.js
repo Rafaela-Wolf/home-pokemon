@@ -6,6 +6,11 @@ export const Main = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
+
+    @media (max-width: 620px) {
+        flex-direction: column;
+        overflow: auto;
+    }
 `
 
 export const Details = styled.section`
@@ -24,6 +29,17 @@ export const Details = styled.section`
         height: 60vh;
         width: 40%;
         margin-top: 15px;
+    }
+
+    @media (max-width: 620px) {
+       margin: 35px;
+       padding: 20px;
+       line-height: 1.8;
+       height: 70vh;
+    }
+
+    @media (max-width: 298px) {
+        margin: 40px;
     }
 `
 
@@ -51,6 +67,19 @@ export const StyledLink = styled(Link)`
         font-weight: 600;
         font-size: 14px;
     }
+
+    @media (max-width: 440px) {
+        font-size: 12px;
+        margin: 20px;
+    }
+    
+    @media (max-width: 376px) {
+        margin: 25px;
+    }
+
+    @media (max-width: 298px) {
+        margin: 10px;
+    }
 `
 
 export const PokemonImgDet = styled.img`
@@ -73,11 +102,20 @@ export const PokemonNameDet = styled.h1`
     @media (max-width: 1024px) {
         font-size: 25px;
     }
+
+    @media (max-width: 440px) {
+        font-size: 18px;
+    }
 `
 export const PokemonProfile = styled.div`
     display: flex;
     gap: 50px;
     text-align: center;
+        
+    @media (max-width: 518px) {
+        flex-direction: column;
+        gap: 5px;
+    }
 `
 
 export const MovesList = styled.ul`
@@ -140,6 +178,10 @@ export const AbilitiesList = styled.div`
     @media (max-width: 750px) {
         width: 40%;
     }
+
+    @media (max-width: 620px) {
+       margin: 35px;
+    }
 `
 
 export const AbilitiesTitle = styled.h3`
@@ -178,6 +220,14 @@ export const AbilitiesName = styled.h5`
     @media (max-width: 860px) {
         font-size: 14px;
     }
+    
+    @media (max-width: 376px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 298px) {
+        text-align: center;
+    }
 `
 
 export const AbilitiesDescription = styled.p`
@@ -192,5 +242,10 @@ export const AbilitiesDescription = styled.p`
 
     @media (max-width: 860px) {
         font-size: 14px;
+    }
+
+    @media (max-width: 560px) {
+        font-size: 12px;
+        margin: 15px;
     }
 `

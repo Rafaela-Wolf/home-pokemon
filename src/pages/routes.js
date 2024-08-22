@@ -15,3 +15,5 @@ function AppRoutes() {
 }
 
 export default AppRoutes;
+
+module.exports = AppRoutes;
