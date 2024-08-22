@@ -20,8 +20,23 @@ export const HomeTitle = styled.h1`
     border: 2px solid transparent;
     text-align: center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 952px) {
         font-size: 16px;
+    }
+    
+    @media (max-width: 533px) {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    @media (max-width: 470px) {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    @media (max-width: 298px) {
+        padding: 5px;
+        margin: 15px;
     }
 `;
 
@@ -64,6 +79,15 @@ export const PokemonName = styled.h1`
 
     &:first-letter {
         text-transform: uppercase;
-  }
+    }
 
+    @media (max-width: 533px) {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    @media (max-width: 470px) {
+        font-size: 12px;
+        font-weight: 400;
+    }
 `;

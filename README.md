@@ -58,14 +58,4 @@ npm run build
 yarn build
 Este comando criará uma versão otimizada para produção da aplicação na pasta build.
 
-## Estrutura do Projeto
-
-src/
-│
-├── components/        # Componentes reutilizáveis
-├── pages/             # Páginas (Home, Detalhes)
-├── styles/            # Estilos globais e temas
-├── services/          # Arquivo para chamadas à API
-└── App.js             # Componente principal da aplicação
-
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.

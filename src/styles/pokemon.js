@@ -5,8 +5,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh; 
-  width: 100vw;
+  height: 100vh;
 `
 
 export const Details = styled.section`
@@ -20,6 +19,12 @@ export const Details = styled.section`
     border-radius: 5px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4), 
                 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 750px) {
+        height: 60vh;
+        width: 40%;
+        margin-top: 15px;
+    }
 `
 
 export const StyledLink = styled(Link)`
@@ -41,6 +46,11 @@ export const StyledLink = styled(Link)`
         background-color: #3D7DCA;
         color: #FFFFFF;
     }
+
+    @media (max-width: 1024px) {
+        font-weight: 600;
+        font-size: 14px;
+    }
 `
 
 export const PokemonImgDet = styled.img`
@@ -58,6 +68,10 @@ export const PokemonNameDet = styled.h1`
 
     &:first-letter {
         text-transform: uppercase;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 25px;
     }
 `
 export const PokemonProfile = styled.div`
@@ -78,11 +92,28 @@ export const TitleAndDescription = styled.li`
         font-size: 22px;
         padding-bottom: 5px;
         color: #FFD700;
+
+        @media (max-width: 1024px) {
+            font-size: 18px;
+        }
+
+        @media (max-width: 860px) {
+            font-size: 16px;
+        }
+
     }
 
     font-weight: 400;
     font-size: 18px;
     color: #FFFFFF;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 860px) {
+        font-size: 14px;
+    }
 
     &:first-letter {
         text-transform: uppercase;
@@ -105,6 +136,10 @@ export const AbilitiesList = styled.div`
     border-radius: 5px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4), 
                 0px 5px 15px rgba(0, 0, 0, 0.2);
+    
+    @media (max-width: 750px) {
+        width: 40%;
+    }
 `
 
 export const AbilitiesTitle = styled.h3`
@@ -114,6 +149,14 @@ export const AbilitiesTitle = styled.h3`
     text-align: center;
     margin: 8px 5px;
     padding: 10px;
+
+    @media (max-width: 1024px) {
+        font-size: 18px;
+    }
+    
+     @media (max-width: 860px) {
+        font-size: 16px;
+    }
 `
 
 export const AbilitiesName = styled.h5`
@@ -127,6 +170,14 @@ export const AbilitiesName = styled.h5`
     padding: 5px;
     color: #ffffff;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+    
+    @media (max-width: 860px) {
+        font-size: 14px;
+    }
 `
 
 export const AbilitiesDescription = styled.p`
@@ -137,5 +188,9 @@ export const AbilitiesDescription = styled.p`
 
     &:last-child {
         margin-bottom: 25px;
+    }
+
+    @media (max-width: 860px) {
+        font-size: 14px;
     }
 `

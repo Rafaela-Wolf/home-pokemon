@@ -27,4 +27,24 @@ export const StyleThemeColorBtn = styled(ThemeColorButton)`
       font-size: 20px;
       padding: 2px;
     }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (max-width: 533px) {
+      font-size: 14px;
+      width: 25px;
+      height: 25px;
+    }
+
+    @media (max-width: 470px) {
+      font-size: 12px;
+    }
+    
+    @media (max-width: 425px) {
+      top: 70px;
+    }
 `

@@ -22,4 +22,12 @@ export const StyleRenderMoreBtn = styled(RenderMoreButton)`
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       font-weight: 700;
     }
+
+    @media (max-width: 470px) {
+      font-size: 12px;
+      font-weight: 400;
+
+      &:hover {
+        font-weight: 400;
+    }
 `
