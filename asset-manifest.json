@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Rafaela-Wolf/home-pokemon/static/css/main.e6c13ad2.css",
-    "main.js": "/Rafaela-Wolf/home-pokemon/static/js/main.d1aceb23.js",
-    "static/js/453.4567fb46.chunk.js": "/Rafaela-Wolf/home-pokemon/static/js/453.4567fb46.chunk.js",
-    "index.html": "/Rafaela-Wolf/home-pokemon/index.html",
-    "main.e6c13ad2.css.map": "/Rafaela-Wolf/home-pokemon/static/css/main.e6c13ad2.css.map",
-    "main.d1aceb23.js.map": "/Rafaela-Wolf/home-pokemon/static/js/main.d1aceb23.js.map",
-    "453.4567fb46.chunk.js.map": "/Rafaela-Wolf/home-pokemon/static/js/453.4567fb46.chunk.js.map"
+    "main.css": "/home-pokemon/static/css/main.e6c13ad2.css",
+    "main.js": "/home-pokemon/static/js/main.19460975.js",
+    "static/js/453.4567fb46.chunk.js": "/home-pokemon/static/js/453.4567fb46.chunk.js",
+    "index.html": "/home-pokemon/index.html",
+    "main.e6c13ad2.css.map": "/home-pokemon/static/css/main.e6c13ad2.css.map",
+    "main.19460975.js.map": "/home-pokemon/static/js/main.19460975.js.map",
+    "453.4567fb46.chunk.js.map": "/home-pokemon/static/js/453.4567fb46.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.d1aceb23.js"
+    "static/js/main.19460975.js"
   ]
 }
