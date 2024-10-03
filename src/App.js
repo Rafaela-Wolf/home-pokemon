@@ -1,6 +1,6 @@
 import AppRoutes from './pages/routes';
 import { DarkTheme, LightTheme } from './styles/themes';
-import  { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { StyleThemeColorBtn } from './styles/theme-color-button';
 
@@ -16,19 +16,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <StyleThemeColorBtn isDarkMode={isDarkMode} onClick={toggleTheme} />
-        <AppRoutes />
+      <StyleThemeColorBtn isDarkMode={isDarkMode} onClick={toggleTheme} />
+      <AppRoutes />
     </ThemeProvider>
   );
 }
 
 const GlobalStyles = createGlobalStyle`
- @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Regular.woff2') format('woff2'),
-         url('/fonts/Poppins-Regular.woff') format('woff');
-  }
-
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+ 
   body {
     margin: 0;
     padding: 0;
