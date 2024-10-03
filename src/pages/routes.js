@@ -5,14 +5,12 @@ import PokemonDetails from '../components/pokemon';
 
 function AppRoutes() {
     return (
-        <BrowserRouter basename="/home-pokemon">
             <Router>
                 <Routes>
                     <Route path="/" element={<PokemonList />} />
                     <Route path="/pokemon/:name" element={<PokemonDetails />} />
                 </Routes>
             </Router>
-        </BrowserRouter>
     );
 }
 
